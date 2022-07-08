@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.row {
+  height: 100%;
+}
+
+.chatcontent{
+  	height:80vh;
+	margin-bottom: 20px;
+	margin-right: 40px;
+   	overflow:auto;
+}
+
+.content{
+	background-color: #eeeeee;
+}
+
+.channels{
+	background-color: #2E2E2E;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100vw; /* Full width (cover the whole page) */
+  height: 100vh; /* Full height (cover the whole page) */
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#map {
+  height: 500px;
+  width: 400px;
+}

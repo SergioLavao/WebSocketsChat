@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/layout.css">
+    {% block scripts %}{% endblock %}
+  </head>
+  <body>
+    {% block body %}{% endblock %}
+    <!--Overlay-->
+    <div id="overlay">
+      <div class="card col-xs-1 text-center">
+        <div class="card-bEody">
+          <h5 class="card-title">Welcome to Flack!</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Project 2</h6>
+          <p class="card-text">Set an username and start chatting</p>
+          <form id="form">
+            <div class="row justify-content-center m-2">
+              <div class="col-8">
+                <input class="form-control" id="username" autofocus type="text" placeholder="Username...">
+              </div>
+            </div>
+            <div class="row justify-content-center m-2">
+              <div class="col-8">
+                <input type="submit" class="btn btn-dark">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Overlay-->
+    <div class="row">
+      <!-- Channel Zone -->
+      <div class="col-4 channels text-white shadow-lg">
+        <h1 class="m-2"><small class="username">Username!</small></h1>
+        <h1 class="m-2 border-bottom"><small>Channels</small></h1>
+        <!-- Channel List-->
+        <ul id="channels">
+        </ul>
+        <!-- Channel List-->
+        <!--New channel-->
+        <form id="new-channel">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <input class="form-control" id="channel-name" type="text" placeholder="Channel name...">
+            </div>
+            <div class="col-12 m-2">
+              <input type="submit" class="btn btn-secondary" value="Create">
+            </div>
+          </div>
+        </form>
+
+        <h1 class="m-2 border-bottom"><small>Users</small></h1>
+        <!-- Users List-->
+        <ul id="usernames">
+        </ul>
+        <!--New channel-->
+      </div>
+      <!-- Channel Zone -->
+      <!-- CHAT ZONE -->
+      <div class="col-8 text-dark content">
+        <h1 id="channel-title" class="m-2">Open a channel!</h1>
+        <div class="chatcontent alert alert-dark">
+          <div class="container" id="messages">
+          <div id="map"></div> <!--rm-->
+          </div>
+        </div>
+        <div>
+        <!-- NEW MESSAGE --> 
+          <form id="new-message">
+            <div class="row">
+              <div class="col-8">
+                <input class="form-control" id="message" type="text" placeholder="Type a message...">
+              </div>
+              <div class="col-4">
+                <input type="submit" class="btn btn-dark">
+              </div>
+            </div>
+          </form>
+        <!-- NEW MESSAGE --> 
+        </div>
+      </div>
+    </div>
+    <!-- CHAT ZONE -->
+  </div>
+</body>
+</html>
